@@ -4,6 +4,10 @@
   "description": "Luau language support for Roblox development.",
   "version": "0.1.0",
   "publisher": "realduckycash",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/DuckyCashy/Luau-Language-Support.git"
+  },
   "license": "MIT",
   "engines": {
     "vscode": "^1.90.0"
@@ -21,18 +25,6 @@
   "activationEvents": [
     "onLanguage:luau",
     "onDebug"
-  ],
-  "files": [
-    "out/**",
-    "syntaxes/**",
-    "language-configuration/**",
-    "themes/**",
-    "icons/**",
-    "snippets/**",
-    "definitions/**",
-    "README.md",
-    "LICENSE",
-    "CHANGELOG.md"
   ],
   "contributes": {
     "languages": [
