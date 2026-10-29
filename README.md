@@ -60,5 +60,7 @@ npm install
 npm test
 npm run compile
 ```
+---
+
 ### Licensing
 This project is licensed unter MIT License.
