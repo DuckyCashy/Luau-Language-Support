@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/DuckyCashy/Luau-Language-Support/raw/HEAD/icons/luau.png" alt="Luau Language Support" width="100">
+    <img src="https://github.com/DuckyCashy/Luau-Language-Support/raw/HEAD/icons/luau.png" alt="Luau Language Support" width="125">
 </p>
 
 <h1 align="center">Luau Language Support</h1>
