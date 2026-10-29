@@ -1,0 +1,200 @@
+{
+  "name": "luau-language-support",
+  "displayName": "Luau Language Support",
+  "description": "Luau language support for Roblox development.",
+  "version": "0.1.0",
+  "publisher": "realduckycash",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Debuggers"
+  ],
+  "keywords": [
+    "luau",
+    "lua",
+    "roblox"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:luau",
+    "onDebug"
+  ],
+  "files": [
+    "out/**",
+    "syntaxes/**",
+    "language-configuration/**",
+    "themes/**",
+    "icons/**",
+    "snippets/**",
+    "definitions/**",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "luau",
+        "aliases": [
+          "Luau",
+          "luau"
+        ],
+        "extensions": [
+          ".luau"
+        ],
+        "configuration": "./language-configuration/luau-language-configuration.json",
+        "icon": {
+          "light": "./icons/luau.svg",
+          "dark": "./icons/luau.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "luau",
+        "scopeName": "source.luau",
+        "path": "./syntaxes/luau.tmLanguage.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "luau-icons",
+        "label": "Luau File Icons",
+        "path": "./icons/luau-icon-theme.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "luau",
+        "path": "./snippets/luau.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "luau.restartAnalyzer",
+        "title": "Luau: Refresh Analyzer"
+      }
+    ],
+    "configuration": {
+      "title": "Luau Language Support",
+      "properties": {
+        "luau.languageServer.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable the bundled Luau language server."
+        },
+        "luau.analyzer.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable an external Luau analyzer."
+        },
+        "luau.analyzer.path": {
+          "type": "string",
+          "default": "",
+          "description": "Path to an external Luau analyzer executable."
+        },
+        "luau.analyzer.arguments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Arguments passed to the analyzer before the file path."
+        },
+        "luau.completion.robloxGlobals": {
+          "type": "boolean",
+          "default": true,
+          "description": "Provide common Roblox global completions."
+        },
+        "luau.debugger.adapterPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to a compatible Luau Debug Adapter Protocol executable."
+        }
+      }
+    },
+    "debuggers": [
+      {
+        "type": "luau",
+        "label": "Luau Debugger",
+        "languages": [
+          "luau"
+        ],
+        "configurationAttributes": {
+          "launch": {
+            "required": [
+              "program"
+            ],
+            "properties": {
+              "program": {
+                "type": "string"
+              },
+              "adapterPath": {
+                "type": "string"
+              },
+              "adapterArgs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "attach": {
+            "properties": {
+              "host": {
+                "type": "string",
+                "default": "127.0.0.1"
+              },
+              "port": {
+                "type": "number",
+                "default": 4711
+              },
+              "adapterPath": {
+                "type": "string"
+              },
+              "adapterArgs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "configurationSnippets": [
+          {
+            "label": "Launch Luau",
+            "body": {
+              "type": "luau",
+              "request": "launch",
+              "name": "Launch Luau",
+              "program": "${file}"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run typecheck && npm run compile",
+    "vscode:prepublish": "npm run typecheck && npm run compile"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1",
+    "vscode-languageserver": "^9.0.1",
+    "vscode-languageserver-textdocument": "^1.0.12"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/vscode": "^1.90.0",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.7.2"
+  }
+}
