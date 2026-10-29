@@ -1,0 +1,8 @@
+-- Add project-specific global declarations here.
+--
+-- Example:
+--
+-- declare MyProject: {
+--     initialize: () -> (),
+--     version: string
+-- }

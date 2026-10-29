@@ -1,0 +1,26 @@
+{
+  "iconDefinitions": {
+    "_luau": {
+      "iconPath": "./luau.svg"
+    },
+    "_lua": {
+      "iconPath": "./lua.svg"
+    }
+  },
+  "fileExtensions": {
+    "luau": "_luau",
+    "lua": "_lua"
+  },
+  "light": {
+    "fileExtensions": {
+      "luau": "_luau",
+      "lua": "_lua"
+    }
+  },
+  "highContrast": {
+    "fileExtensions": {
+      "luau": "_luau",
+      "lua": "_lua"
+    }
+  }
+}

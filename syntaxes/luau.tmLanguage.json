@@ -1,0 +1,160 @@
+{
+  "scopeName": "source.luau",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#attributes" },
+    { "include": "#keywords" },
+    { "include": "#types" },
+    { "include": "#functions" },
+    { "include": "#constants" },
+    { "include": "#numbers" },
+    { "include": "#operators" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.luau",
+          "begin": "--\\[(=*)\\[",
+          "end": "\\]\\1\\]"
+        },
+        {
+          "name": "comment.line.double-dash.luau",
+          "match": "--.*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.long.luau",
+          "begin": "\\[(=*)\\[",
+          "end": "\\]\\1\\]"
+        },
+        {
+          "name": "string.quoted.double.luau",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.luau",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.luau",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.luau",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.template.luau",
+          "begin": "`",
+          "end": "`",
+          "patterns": [
+            {
+              "name": "constant.character.escape.luau",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "attributes": {
+      "patterns": [
+        {
+          "name": "storage.type.attribute.luau",
+          "match": "@[A-Za-z_][A-Za-z0-9_]*"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.luau",
+          "match": "\\b(?:and|break|continue|do|else|elseif|end|for|function|if|in|local|not|or|repeat|return|then|until|while)\\b"
+        },
+        {
+          "name": "storage.type.luau",
+          "match": "\\b(?:type|export|declare)\\b"
+        },
+        {
+          "name": "keyword.operator.type.luau",
+          "match": "\\b(?:as|typeof)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "support.type.luau",
+          "match": "\\b(?:any|unknown|never|nil|boolean|string|number|thread|buffer|vector|table)\\b"
+        },
+        {
+          "name": "keyword.operator.type.luau",
+          "match": "\\?|\\|"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "entity.name.function.luau",
+          "match": "\\bfunction\\s+([A-Za-z_][A-Za-z0-9_.:]*)",
+          "captures": {
+            "1": {
+              "name": "entity.name.function.luau"
+            }
+          }
+        },
+        {
+          "name": "entity.name.function.luau",
+          "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\s*(?=\\()"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.luau",
+          "match": "\\b(?:true|false|nil)\\b"
+        },
+        {
+          "name": "variable.language.luau",
+          "match": "\\bself\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.hexadecimal.luau",
+          "match": "\\b0[xX][0-9A-Fa-f]+\\b"
+        },
+        {
+          "name": "constant.numeric.luau",
+          "match": "\\b\\d+(?:\\.\\d+)?(?:[eE][+-]?\\d+)?\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.luau",
+          "match": "\\.\\.\\.|\\.\\.|==|~=|<=|>=|::|->|[+*/%^#=<>-]"
+        },
+        {
+          "name": "punctuation.separator.luau",
+          "match": "[,;:.]"
+        }
+      ]
+    }
+  }
+}

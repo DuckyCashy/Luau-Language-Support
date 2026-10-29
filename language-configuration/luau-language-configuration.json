@@ -1,0 +1,40 @@
+{
+  "comments": {
+    "lineComment": "--",
+    "blockComment": [
+      "--[[",
+      "]]"
+    ]
+  },
+  "brackets": [
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"]
+  ],
+  "autoClosingPairs": [
+    { "open": "{", "close": "}" },
+    { "open": "[", "close": "]" },
+    { "open": "(", "close": ")" },
+    { "open": "\"", "close": "\"", "notIn": ["string"] },
+    { "open": "'", "close": "'", "notIn": ["string"] },
+    { "open": "`", "close": "`", "notIn": ["string"] }
+  ],
+  "surroundingPairs": [
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"],
+    ["\"", "\""],
+    ["'", "'"],
+    ["`", "`"]
+  ],
+  "folding": {
+    "markers": {
+      "start": "^\\s*(?:function\\b.*|if\\b.*\\bthen\\s*$|for\\b.*\\bdo\\s*$|while\\b.*\\bdo\\s*$|repeat\\s*$|do\\s*$)",
+      "end": "^\\s*(?:end|until)\\b"
+    }
+  },
+  "indentationRules": {
+    "increaseIndentPattern": "^\\s*(?:function\\b.*|if\\b.*\\bthen\\s*$|for\\b.*\\bdo\\s*$|while\\b.*\\bdo\\s*$|else\\b.*|elseif\\b.*\\bthen\\s*$|repeat\\s*$|do\\s*$).*",
+    "decreaseIndentPattern": "^\\s*(?:end|else|elseif|until)\\b"
+  }
+}

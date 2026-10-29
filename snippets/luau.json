@@ -1,0 +1,117 @@
+{
+  "Local variable": {
+    "prefix": "local",
+    "body": [
+      "local ${1:name} = ${2:value}"
+    ],
+    "description": "Declare a local variable."
+  },
+  "Local function": {
+    "prefix": "func",
+    "body": [
+      "local function ${1:name}(${2:args})",
+      "\t${3}",
+      "end"
+    ],
+    "description": "Declare a local function."
+  },
+  "If statement": {
+    "prefix": "if",
+    "body": [
+      "if ${1:condition} then",
+      "\t${2}",
+      "end"
+    ],
+    "description": "Create an if statement."
+  },
+  "If else statement": {
+    "prefix": "ifelse",
+    "body": [
+      "if ${1:condition} then",
+      "\t${2}",
+      "else",
+      "\t${3}",
+      "end"
+    ],
+    "description": "Create an if-else statement."
+  },
+  "Numeric for loop": {
+    "prefix": "fori",
+    "body": [
+      "for ${1:i} = ${2:1}, ${3:10} do",
+      "\t${4}",
+      "end"
+    ],
+    "description": "Create a numeric for loop."
+  },
+  "Generic for loop": {
+    "prefix": "forin",
+    "body": [
+      "for ${1:key}, ${2:value} in ${3:iterator} do",
+      "\t${4}",
+      "end"
+    ],
+    "description": "Create a generic for loop."
+  },
+  "While loop": {
+    "prefix": "while",
+    "body": [
+      "while ${1:condition} do",
+      "\t${2}",
+      "end"
+    ],
+    "description": "Create a while loop."
+  },
+  "Type definition": {
+    "prefix": "type",
+    "body": [
+      "type ${1:Name} = {",
+      "\t${2:field}: ${3:string},",
+      "}"
+    ],
+    "description": "Declare a Luau type."
+  },
+  "Exported type": {
+    "prefix": "exporttype",
+    "body": [
+      "export type ${1:Name} = {",
+      "\t${2:field}: ${3:string},",
+      "}"
+    ],
+    "description": "Declare an exported type."
+  },
+  "Roblox service": {
+    "prefix": "getservice",
+    "body": [
+      "local ${1:Service} = game:GetService(\"${2:ServiceName}\")"
+    ],
+    "description": "Get a Roblox service."
+  },
+  "Connect event": {
+    "prefix": "connect",
+    "body": [
+      "${1:signal}:Connect(function(${2:args})",
+      "\t${3}",
+      "end)"
+    ],
+    "description": "Connect a callback to an event."
+  },
+  "Task delay": {
+    "prefix": "taskdelay",
+    "body": [
+      "task.delay(${1:seconds}, function()",
+      "\t${2}",
+      "end)"
+    ],
+    "description": "Schedule a delayed callback."
+  },
+  "Protected call": {
+    "prefix": "pcall",
+    "body": [
+      "local ${1:success}, ${2:result} = pcall(function()",
+      "\t${3}",
+      "end)"
+    ],
+    "description": "Run a function with protected error handling."
+  }
+}
