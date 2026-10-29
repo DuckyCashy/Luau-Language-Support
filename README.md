@@ -5,7 +5,7 @@
 <h1 align="center">Luau Language Support</h1>
 
 <p align="center">
-  Language support for Luau and Lua development in Visual Studio Code.
+  Language support for Luau and Lua development in Visual Studio Code. This Extension is also known as "Luau DevKit"
 </p>
 
 <p align="center">
