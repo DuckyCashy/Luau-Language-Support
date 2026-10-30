@@ -1,5 +1,5 @@
 {
-  "name": "realduckycash.luau-devkit",
+  "name": "luau-devkit",
   "displayName": "Luau DevKit",
   "description": "Luau language support for Roblox development.",
   "version": "0.1.1",
@@ -38,13 +38,8 @@
     "languages": [
       {
         "id": "luau",
-        "aliases": [
-          "Luau",
-          "luau"
-        ],
-        "extensions": [
-          ".luau"
-        ],
+        "aliases": ["Luau", "luau"],
+        "extensions": [".luau"],
         "configuration": "./language-configuration/luau-language-configuration.json",
         "icon": {
           "light": "./icons/luau.svg",
@@ -120,14 +115,10 @@
       {
         "type": "luau",
         "label": "Luau Debugger",
-        "languages": [
-          "luau"
-        ],
+        "languages": ["luau"],
         "configurationAttributes": {
           "launch": {
-            "required": [
-              "program"
-            ],
+            "required": ["program"],
             "properties": {
               "program": {
                 "type": "string"
