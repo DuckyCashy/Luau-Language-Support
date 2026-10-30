@@ -1,12 +1,16 @@
 {
-  "name": "luau-tools",
-  "displayName": "Luau Language Support",
+  "name": "realduckycash.luau-devkit",
+  "displayName": "Luau DevKit",
   "description": "Luau language support for Roblox development.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "realduckycash",
   "repository": {
-  "type": "git",
-  "url": "https://github.com/DuckyCashy/Luau-Language-Support.git"
+    "type": "git",
+    "url": "https://github.com/DuckyCashy/Luau-Language-Support.git"
+  },
+  "homepage": "https://github.com/DuckyCashy/Luau-Language-Support#readme",
+  "bugs": {
+    "url": "https://github.com/DuckyCashy/Luau-Language-Support/issues"
   },
   "license": "MIT",
   "engines": {
@@ -19,7 +23,11 @@
   "keywords": [
     "luau",
     "lua",
-    "roblox"
+    "roblox",
+    "debugger",
+    "roblox studio",
+    "language support",
+    "development tools"
   ],
   "main": "./out/extension.js",
   "activationEvents": [
@@ -71,7 +79,7 @@
       }
     ],
     "configuration": {
-      "title": "Luau Language Support",
+      "title": "Luau DevKit",
       "properties": {
         "luau.languageServer.enabled": {
           "type": "boolean",
