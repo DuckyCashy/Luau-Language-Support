@@ -2,7 +2,7 @@
   "name": "luau-devkit",
   "displayName": "Luau DevKit",
   "description": "Luau language support for Roblox development.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "realduckycash",
   "repository": {
     "type": "git",
