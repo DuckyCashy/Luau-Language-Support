@@ -29,7 +29,7 @@
 
 ## Screenshots
 
-<p align="center"
+<p align="center">
     <img src="https://github.com/DuckyCashy/images/blob/main/Code/VS%20Code/Screenshots/Luau%20DevKit/Screenshot%202026-10-30%20135356.png" alt="luau">
     <img src="https://github.com/DuckyCashy/images/blob/main/Code/VS%20Code/Screenshots/Luau%20DevKit/Screenshot%202026-10-30%20135659.png" alt="lua">
 </p>
